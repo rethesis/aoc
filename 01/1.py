@@ -1,6 +1,6 @@
 #!/usr/bin/python
-calories =  [i for i in open("input1.txt",'r').read().split('\n')]
-
+calories =  [i for i in open("input1.txt",'r').read().splitlines()]
+print(calories)
 mx = [0,0,0]
 tmp = 0
 
