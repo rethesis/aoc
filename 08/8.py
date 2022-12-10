@@ -1,0 +1,4 @@
+#Part 1
+print(sum([s:=open("input.txt").read().splitlines(),(((r[j]>max(r[:j]+[-1]))|(r[j]>max(r[j+1:]+[-1]))|(c[l]>max(c[:l]+[-1]))|(c[l]>max(c[l+1:]+[-1]))) for l,i in enumerate(s) for j in range(99) for r,c in [[[*map(int,i)],[int(s[q][j]) for q in range(99)]]])][1]))
+#Part 2
+print(max([s:=open("input.txt").read().splitlines(),[([[aa:=1,ab:=1,ac:=1,ad:=1],(sum([aa:=0 if q>=ro[j] else aa for q in ro[j+1:]])+(ro[j]<=max(ro[j+1:]+[-1])))*(sum([ab:=0 if q>=ro[j] else ab for q in ro[j-1::-1]])+(ro[j]<=max(ro[:j]+[-1])))*(sum([ac:=0 if q>=ro[j] else ac for q in co[k+1:]])+(ro[j]<=max(co[k+1:]+[-1])))*(sum([ad:=0 if q>=ro[j] else ad for q in co[k-1::-1]])+(ro[j]<=max(co[:k]+[-1])))][1]) for k,i in enumerate(s) for j in range(99) for ro,co in [[[*map(int,i)],[int(s[w][j]) for w in range(99)]]]]][1]))
