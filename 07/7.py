@@ -1,0 +1,4 @@
+#Part 1
+print([file:=open('input.txt').read().splitlines(),Fsize:={},Cpath:=[],[([Cpath.pop(),None][1] if '..'in cmd else Cpath.append(cmd[2]) if cmd[1]=='cd' else None if cmd[0]=='$' else None if cmd[0]=='dir' else [exec(f"Fsize[\"{'/'.join(Cpath[:w])}\"]=Fsize.get(\"{'/'.join(Cpath[:w])}\",0)+int({cmd[0]})") for w in range(1,len(Cpath)+1)]) for i in file for cmd in [i.split()]],sum([v*(v<=100000) for v in Fsize.values()])][4])
+#Part 2
+print([file:=open('input.txt').read().splitlines(),Fsize:={},Cpath:=[],[([Cpath.pop(),None][1] if '..'in cmd else Cpath.append(cmd[2]) if cmd[1]=='cd' else None if cmd[0]=='$' else None if cmd[0]=='dir' else [exec(f"Fsize[\"{'/'.join(Cpath[:w])}\"]=Fsize.get(\"{'/'.join(Cpath[:w])}\",0)+int({cmd[0]})") for w in range(1,len(Cpath)+1)]) for i in file for cmd in [i.split()]],min([v if v>=(Fsize['/']-40000000) else max(Fsize.values()) for v in Fsize.values()])][4])
