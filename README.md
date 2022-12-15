@@ -1,4 +1,4 @@
-# My advent of code 2022 solutions
+# Advent of code 2022 solutions
 
-### 6/25
+### 9/25
 
